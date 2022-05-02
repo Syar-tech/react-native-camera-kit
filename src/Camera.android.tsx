@@ -14,6 +14,9 @@ const Camera = React.forwardRef((props, ref) => {
       // we must use the general module and tell it what View it's supposed to be using
       return await RNCameraKitModule.capture(options, findNodeHandle(nativeRef.current));
     },
+    deleteFromMediaStore: (uri)=>{
+      RNCameraKitModule.capture(uri);
+    },
     requestDeviceCameraAuthorization: async () => {
       return await RNCameraKitModule.requestDeviceCameraAuthorization();
     },
