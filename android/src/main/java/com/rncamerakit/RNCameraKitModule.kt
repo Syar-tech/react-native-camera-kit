@@ -26,6 +26,11 @@ class RNCameraKitModule(private val reactContext: ReactApplicationContext) : Rea
                 "LANDSCAPE_RIGHT" to LANDSCAPE_RIGHT
         )
     }
+    
+    @ReactMethod
+    fun deleteFromMediaStore(uri: String){
+        reactContext.getContentResolver().delete(Uri.parse(uri),null,null)
+    }
 
     @ReactMethod
     fun capture(options: ReadableMap, viewTag: Int, promise: Promise) {
