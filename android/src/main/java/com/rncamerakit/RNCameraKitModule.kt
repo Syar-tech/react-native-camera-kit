@@ -2,6 +2,8 @@ package com.rncamerakit
 
 import com.facebook.react.bridge.*
 import com.facebook.react.uimanager.UIManagerModule
+import android.content.ContentResolver
+import android.net.Uri
 
 class RNCameraKitModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
